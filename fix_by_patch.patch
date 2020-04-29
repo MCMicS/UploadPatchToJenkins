@@ -1,0 +1,16 @@
+Index: src/test/java/de/mcmics/jenkins/SorterTest.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- src/test/java/de/mcmics/jenkins/SorterTest.java	(revision 2ed54bef4a3a9660f5d43b810b0cdf1c3feef32c)
++++ src/test/java/de/mcmics/jenkins/SorterTest.java	(date 1588142041350)
+@@ -47,6 +47,7 @@
+     @Test
+     public void fixItWithPatch() {
+         SimpleData data = new SimpleData(1L);
+-        Assertions.assertThat(Sorter.sort(Collections.singleton(data))).doesNotContain(data);
++        //Assertions.assertThat(Sorter.sort(Collections.singleton(data))).doesNotContain(data);
++        Assertions.assertThat(Sorter.sort(Collections.singleton(data))).containsOnly(data);
+     }
+ }
