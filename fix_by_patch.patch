@@ -3,13 +3,14 @@ IDEA additional info:
 Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
 <+>UTF-8
 ===================================================================
---- src/test/java/de/mcmics/jenkins/SorterTest.java	(revision 2ed54bef4a3a9660f5d43b810b0cdf1c3feef32c)
-+++ src/test/java/de/mcmics/jenkins/SorterTest.java	(date 1588142041350)
-@@ -47,6 +47,7 @@
+--- src/test/java/de/mcmics/jenkins/SorterTest.java	(revision 4b2ed14530112f0a8e36221b56fbc9ee8ee6b8b4)
++++ src/test/java/de/mcmics/jenkins/SorterTest.java	(date 1588142585568)
+@@ -47,7 +47,7 @@
      @Test
      public void fixItWithPatch() {
          SimpleData data = new SimpleData(1L);
 -        Assertions.assertThat(Sorter.sort(Collections.singleton(data))).doesNotContain(data);
+-        //Assertions.assertThat(Sorter.sort(Collections.singleton(data))).containsOnly(data);
 +        //Assertions.assertThat(Sorter.sort(Collections.singleton(data))).doesNotContain(data);
 +        Assertions.assertThat(Sorter.sort(Collections.singleton(data))).containsOnly(data);
      }
