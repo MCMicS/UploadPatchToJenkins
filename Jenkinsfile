@@ -4,5 +4,8 @@ node {
 
     properties([parameters([[$class: 'PatchParameterDefinition']])])
 
-    bat "mvn -U package"
+    git credentialsId: 'Jenkins 2 Github', url: 'https://github.com/MCMicS/UploadPatchToJenkins.git'
+    withMaven(jdk: 'JDK14', maven: 'Maven') {
+        bat "mvn -U package"
+    }
 }
